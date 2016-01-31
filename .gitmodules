@@ -1,0 +1,3 @@
+[submodule "RFduino"]
+	path = RFduino
+	url = git://github.com/akinaru/RFduino.git
