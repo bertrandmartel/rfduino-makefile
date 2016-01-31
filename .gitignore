@@ -1,10 +1,7 @@
 /toolchain/gcc-arm-none-eabi-4.8.3-2014q1
-boards.txt
-platform.txt
 *.o
-/lib
-/include
 *.hex
 *.map
 *.d
 *.elf
+*.a

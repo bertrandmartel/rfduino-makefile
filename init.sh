@@ -11,7 +11,7 @@ function check_exists {
 }
 
 echo -ne "\x1B[0m"
-echo "extracting build vars..."
+echo "checking toolchain"
 
 RFDUINO_DIR=./RFduino
 TOOLCHAIN_DIR=./toolchain/gcc-arm-none-eabi-4.8.3-2014q1
@@ -24,39 +24,6 @@ if [ ! -d ${RFDUINO_DIR} ]; then
 	echo -ne "\x1B[0m"
 	exit 1
 fi
-
-if [ ! -f ${RFDUINO_DIR}/boards.txt ]; then
-	echo -ne "\x1B[31m"
-	echo "[ ERROR ] boards.txt missing"
-	echo "[ ERROR ] execute > git submodule update"
-	echo -ne "\x1B[0m"
-	exit 1
-fi
-
-if [ ! -f ${RFDUINO_DIR}/platform.txt ]; then
-	echo -ne "\x1B[31m"
-	echo "[ ERROR ] platform.txt missing"
-	echo "[ ERROR ] execute > git submodule update"
-	echo -ne "\x1B[0m"
-	exit 1
-fi
-
-if [ ! -f boards.txt ]; then
-	cp ${RFDUINO_DIR}/boards.txt .
-	sed -i 's/{/${/g' boards.txt
-fi
-
-if [ ! -f platform.txt ]; then
-	cp ${RFDUINO_DIR}/platform.txt .
-	sed -i 's/{/${/g' platform.txt
-	sed -i 's/build./RFduino.build./g' platform.txt
-fi
-
-echo -ne "\x1B[01;32m"
-echo "[OK] build vars successfully extracted"
-echo -ne "\x1B[0m"
-
-echo "checking toolchain"
 
 if [ ! -d ${TOOLCHAIN_DIR} ]; then
 
