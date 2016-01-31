@@ -86,6 +86,23 @@ Note that `init()` function must be called to correctly initialize RFduino modul
 
 Check <a href="https://gist.github.com/akinaru/46be5d05a5635573063c">this gist</a> for a full example (led blink rfduino sample)
 
+## RFduino libraries
+
+If you want to use embedded RFduino libraries such as `RFduinoBLE` your Makefile will have : 
+
+```
+OBJECTS=rfduino-makefile/RFduino/libraries/RFduinoBLE/RFduinoBLE.o some_other_src.o
+HEADERS=-Irfduino-makefile/RFduino/libraries/RFduinoBLE
+```
+
+The same apply for libraries :
+* RFduinoBLE
+* RFduinoGZLL
+* RFduinoNonBLE
+* Servo
+* SPI
+* Wire
+
 ## External projects
 
 * <a href="https://github.com/RFduino/RFduino">the official RFduino project</a>

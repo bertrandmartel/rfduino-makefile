@@ -5,7 +5,7 @@
 #
 ############################################################################
 #title         : Makefile
-#author		   : Bertrand Martel
+#author        : Bertrand Martel
 #date          : 31/01/2015
 #description   : Makefile for RFduino
 ############################################################################
