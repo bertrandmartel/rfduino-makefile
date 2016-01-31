@@ -22,7 +22,6 @@ Build your RFduino project with a single Makefile instead of using Arduino IDE :
 cd project_dir
 git submodule add git://github.com/akinaru/rfduino-makefile.git
 git submodule update --init --recursive
-
 ```
 
 Then create your root `Makefile` in `project_dir` like this :
@@ -52,6 +51,13 @@ Change `OBJECTS` and `HEADERS` according to your requirements :
 * `OBJECTS` contains list of object files `.o` that match your source
 * `HEADERS` contains list of headers directory
 
+Default usb port is set to `/dev/ttyUSB0` by default, if you want to override this, add this to your Makefile : 
+
+```
+PORT=/dev/<port>
+export PORT
+```
+
 You have to provide a main function like this : 
 
 ```
@@ -79,6 +85,10 @@ Also `#include "Arduino.h"` is necessary for using Arduino framework
 Note that `init()` function must be called to correctly initialize RFduino module
 
 Check <a href="https://gist.github.com/akinaru/46be5d05a5635573063c">this gist</a> for a full example (led blink rfduino sample)
+
+## External projects
+
+* <a href="https://github.com/RFduino/RFduino">the official RFduino project</a>
 
 ## Useful links
 

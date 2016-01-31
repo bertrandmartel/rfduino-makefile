@@ -1,3 +1,14 @@
+############################################################################
+# The MIT License (MIT)
+#
+# Copyright (c) 2016 Bertrand Martel
+#
+############################################################################
+#title         : Makefile
+#author		   : Bertrand Martel
+#date          : 31/01/2015
+#description   : Makefile for RFduino
+############################################################################
 RFDUINO_DIR=./RFduino
 TOOLCHAIN_DIR=./toolchain/gcc-arm-none-eabi-4.8.3-2014q1
 TOOLCHAIN_BINDIR=$(TOOLCHAIN_DIR)/bin
@@ -18,7 +29,9 @@ RFDUINO_PATH=RFduino/cores/arduino
 VARIANT_PATH=./RFduino/variants/RFduino
 LINKER_SCRIPT=$(VARIANT_PATH)/linker_scripts/gcc/RFduino.ld
 
+ifndef PORT
 PORT=/dev/ttyUSB0
+endif
 
 CORE_LIB=core.a
 

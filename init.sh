@@ -1,4 +1,15 @@
+############################################################################
+# The MIT License (MIT)
+#
+# Copyright (c) 2016 Bertrand Martel
+#
+############################################################################
 #!/bin/bash
+#title         : init.sh
+#author		   : Bertrand Martel
+#date          : 31/01/2015
+#description   : extract toolchain / check build cmds 
+############################################################################
 
 function check_exists {
 
