@@ -57,7 +57,7 @@ You have to provide a main function like this :
 ```
 #include "Arduino.h"
 
-void setup() {
+void setup() {   
 }
 
 void loop() {
