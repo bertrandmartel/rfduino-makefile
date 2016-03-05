@@ -49,7 +49,7 @@ INCLUDES=-I./RFduino/cores/arduino \
 LIB_OBJECTS= $(RFDUINO_PATH)/Print.o $(RFDUINO_PATH)/RingBuffer.o $(RFDUINO_PATH)/Stream.o $(RFDUINO_PATH)/Tone.o \
 		$(RFDUINO_PATH)/UARTClass.o $(RFDUINO_PATH)/wiring_pulse.o $(RFDUINO_PATH)/WMath.o $(RFDUINO_PATH)/WString.o \
 		$(RFDUINO_PATH)/hooks.o $(RFDUINO_PATH)/itoa.o $(RFDUINO_PATH)/Memory.o $(RFDUINO_PATH)/syscalls.o $(RFDUINO_PATH)/WInterrupts.o \
-		$(RFDUINO_PATH)/wiring_analog.o $(RFDUINO_PATH)/wiring.o $(RFDUINO_PATH)/wiring_digital.o $(RFDUINO_PATH)/wiring_shift.o \ $(VARIANT_PATH)/variant.o
+		$(RFDUINO_PATH)/wiring_analog.o $(RFDUINO_PATH)/wiring.o $(RFDUINO_PATH)/wiring_digital.o $(RFDUINO_PATH)/wiring_shift.o $(VARIANT_PATH)/variant.o
 
 $(shell bash init.sh>&2)
 
