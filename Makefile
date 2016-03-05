@@ -26,7 +26,7 @@ ELF_FLAGS=-Wl,--gc-sections --specs=nano.specs
 
 EXTRA_FLAGS=-mthumb -D__RFduino__
 RFDUINO_PATH=RFduino/cores/arduino
-VARIANT_PATH=./RFduino/variants/RFduino
+VARIANT_PATH=RFduino/variants/RFduino
 LINKER_SCRIPT=$(VARIANT_PATH)/linker_scripts/gcc/RFduino.ld
 
 ifndef PORT
