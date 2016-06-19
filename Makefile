@@ -20,9 +20,9 @@ ELF2HEX=$(TOOLCHAIN_BINDIR)/arm-none-eabi-objcopy
 
 FREQ_CPU=16000000
 MCU=cortex-m0
-CXX_FLAGS=-c -g -Os -w -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fno-builtin -MMD
-CC_FLAGS=-c -g -Os -w -ffunction-sections -fdata-sections -fno-builtin -MMD
-ELF_FLAGS=-Wl,--gc-sections --specs=nano.specs
+CXX_FLAGS+=-c -g -Os -w -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fno-builtin -MMD
+CC_FLAGS+=-c -g -Os -w -ffunction-sections -fdata-sections -fno-builtin -MMD
+ELF_FLAGS+=-Wl,--gc-sections --specs=nano.specs
 
 EXTRA_FLAGS=-mthumb -D__RFduino__
 RFDUINO_PATH=RFduino/cores/arduino
