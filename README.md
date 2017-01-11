@@ -20,7 +20,7 @@ Build your RFduino project with a single Makefile instead of using Arduino IDE :
 
 ```
 cd project_dir
-git submodule add git://github.com/akinaru/rfduino-makefile.git
+git submodule add git://github.com/bertrandmartel/rfduino-makefile.git
 git submodule update --init --recursive
 ```
 
@@ -84,7 +84,7 @@ Also `#include "Arduino.h"` is necessary for using Arduino framework
 
 Note that `init()` function must be called to correctly initialize RFduino module
 
-Check <a href="https://gist.github.com/akinaru/46be5d05a5635573063c">this gist</a> for a full example (led blink rfduino sample)
+Check <a href="https://gist.github.com/bertrandmartel/46be5d05a5635573063c">this gist</a> for a full example (led blink rfduino sample)
 
 ## RFduino libraries
 
